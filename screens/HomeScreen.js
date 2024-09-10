@@ -12,6 +12,11 @@ const HomeScreen = ({ navigation }) => {
           title="Go to Signup Screen"
           onPress={() => navigation.navigate('Signup')}
         />
+        <Text>Click below to login</Text>
+        <Button
+          title="LOGIN"
+          onPress={() => navigation.navigate('Login')}
+        />
       </View>
     );
   }
