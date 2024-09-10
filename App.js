@@ -5,10 +5,9 @@ import { GluestackUIProvider } from "/components/ui/gluestack-ui-provider/index.
 import { Button, StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { SignupScreen } from './screens/signup'
-import { Platform } from 'react-native';
+import SignupScreen from './screens/SignupScreen'
 
-function HomeScreen() {
+function HomeScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <Text>Welcome to our app</Text>
