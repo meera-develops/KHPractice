@@ -5,6 +5,7 @@ import { GluestackUIProvider } from "/components/ui/gluestack-ui-provider/index.
 import { Button, StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { SignupScreen } from './screens/signup'
 import { Platform } from 'react-native';
 
 function HomeScreen() {
@@ -17,15 +18,6 @@ function HomeScreen() {
         title="Go to Signup Screen"
         onPress={() => navigation.navigate('Signup')}
       />
-    </View>
-  );
-}
-
-function SignupScreen() {
-  return (
-    <View style={styles.container}>
-      <Text>Intro signup Screen</Text>
-      <Text>Demo Text</Text>
     </View>
   );
 }
