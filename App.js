@@ -2,7 +2,7 @@ import * as React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import '@/global.css';
 import { GluestackUIProvider } from "/components/ui/gluestack-ui-provider/index.tsx";
-import { StyleSheet, Text, View } from 'react-native';
+import { Button, StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Platform } from 'react-native';
@@ -11,6 +11,21 @@ function HomeScreen() {
   return (
     <View style={styles.container}>
       <Text>Welcome to our app</Text>
+      <Text>We are practicing React Native</Text>
+      <Text>And using Gluestack UI for this</Text>
+      <Button
+        title="Go to Signup Screen"
+        onPress={() => navigation.navigate('Signup')}
+      />
+    </View>
+  );
+}
+
+function SignupScreen() {
+  return (
+    <View style={styles.container}>
+      <Text>Intro signup Screen</Text>
+      <Text>Demo Text</Text>
     </View>
   );
 }
@@ -22,6 +37,7 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Signup" component={SignupScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
