@@ -7,6 +7,9 @@ export default function App() {
   return (
     <GluestackUIProvider mode="light"><View style={styles.container}>
         <Text>This is our project for KnightHacks</Text>
+        <Text>Welcome back!</Text>
+        <Text>I now using GlueStack for the UI</Text>
+        <Text>Hello World</Text>
         <StatusBar style="auto" />
       </View></GluestackUIProvider>
   );
