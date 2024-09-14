@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import './LoginSignup.css'
+//import styles from './LoginSignup.css'
+
+//change divs to text elements to fix code
 
 const LoginScreen = ({ navigation }) => {
     return (
