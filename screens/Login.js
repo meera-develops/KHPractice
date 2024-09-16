@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
+import { Button, StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
 
 const LoginScreen = ({ navigation }) => {
   return (
@@ -24,7 +24,7 @@ const LoginScreen = ({ navigation }) => {
           />
         </View>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('ForgotPW')}>
           <Text style={styles.forgotPassword}>
             Forgot Password? <Text style={styles.clickable}>Click here!</Text>
           </Text>
