@@ -4,7 +4,7 @@ import { Button, StyleSheet, Text, View } from 'react-native';
 const ForgotPWScreen = ({ navigation}) => {
     return (
         <View style={styles.container}>
-            <Text>Hi, this page works!</Text>
+            <Text style={styles.test}>Hi, this page works!</Text>
         </View>
     );
 }
@@ -15,6 +15,9 @@ const styles = StyleSheet.create({
         backgroundColor: '#FF0000',
         alignItems: 'center',
         justifyContent: 'center',
+    },
+    test: {
+        color: '#fff'
     },
 });
 
