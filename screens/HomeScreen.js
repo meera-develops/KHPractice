@@ -8,7 +8,6 @@ import turntable from '../assets/echo-img/turntable-light.png';
 const HomeScreen = ({ navigation }) => {
     return (
         <View style={styles.container}>
-
           <ImageBackground
             source={heroScreenImg}
             style={styles.heroImg}>
@@ -18,26 +17,23 @@ const HomeScreen = ({ navigation }) => {
               source={turntable}
               style={styles.turntableImg}
             ></Image>
+
+            {/* convert to TouchableOpacity */}
+            <Button
+              style={styles.buttons}
+              title="Go to Signup Screen"
+              onPress={() => navigation.navigate('Signup')}
+            />
+            <Text style={styles.bodyText}>Click here to log in</Text>
+            <Button
+              style={styles.buttons}
+              title="LOGIN"
+              onPress={() => navigation.navigate('Login')}
+            />
+            {/* convert to TouchableOpacity */}
+
           </ImageBackground>
         </View>
-
-
-      //create login and signup button
-      
-      // <View style={styles.container}>
-      //   <Text>Welcome to our app</Text>
-      //   <Text>We are practicing React Native</Text>
-      //   <Text>And using Gluestack UI for this</Text>
-      //   <Button
-      //     title="Go to Signup Screen"
-      //     onPress={() => navigation.navigate('Signup')}
-      //   />
-      //   <Text>Click below to login</Text>
-      //   <Button
-      //     title="LOGIN"
-      //     onPress={() => navigation.navigate('Login')}
-      //   />
-      // </View>
     );
   }
 
@@ -67,6 +63,18 @@ const HomeScreen = ({ navigation }) => {
       bottom: 170,
       marginBottom: 100,//looks weird on desktop
       alignSelf: 'center',
+    },
+    bodyText: {
+      color: 'white',
+      textAlign: 'center'
+    },
+    buttons: {
+      marginTop: 30,
+      backgroundColor: '#FFF',
+      padding: 10,
+      alignItems: 'center',
+      borderRadius: 5,
+      color: 'black'
     }
   });
 
