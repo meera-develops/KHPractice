@@ -1,7 +1,5 @@
 import * as React from 'react';
-import { ImageBackground, Image, StyleSheet, Text, View } from 'react-native';
-import { Button, ButtonText } from '@/components/ui/button';
-
+import { ImageBackground, Image, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
 import heroScreenImg from '../assets/echo-img/home-screen.jpg';
 import turntable from '../assets/echo-img/turntable-light.png';
@@ -20,23 +18,19 @@ const HomeScreen = ({ navigation }) => {
               style={styles.turntableImg}
             ></Image>
 
-            <Button size="lg" variant="solid" action="negative">
-              <ButtonText>Sign up</ButtonText>
-            </Button>
+            <Text style={styles.header}>Find your <Text style={styles.subtitle}>Echo</Text></Text>
 
-            {/* convert to TouchableOpacity */}
-            {/* <Button
-              style={styles.buttons}
-              title="Go to Signup Screen"
-              onPress={() => navigation.navigate('Signup')}
-            />
-            <Text style={styles.bodyText}>Click here to log in</Text>
-            <Button
-              style={styles.buttons}
-              title="LOGIN"
-              onPress={() => navigation.navigate('Login')}
-            /> */}
-            {/* convert to TouchableOpacity */}
+            <TouchableOpacity onPress={() => navigation.navigate('Signup')} style={styles.buttonContainer}>
+              <Text style={styles.buttons}>
+                Sign up
+              </Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity onPress={() => navigation.navigate('Login')} style={styles.buttonContainer}>
+              <Text style={styles.buttons}>
+                Log in
+              </Text>
+            </TouchableOpacity>
 
           </ImageBackground>
         </View>
@@ -55,32 +49,51 @@ const HomeScreen = ({ navigation }) => {
       justifyContent: 'center',
     },
     heroText: {
+      position: 'absolute',
+      top: 0,
+      padding: 20,
       color: '#C8ACD6',
       fontSize: 80,
       lineHeight: 84,
       textAlign: 'center',
+      alignSelf: 'center',
       letterSpacing: '15',
-      bottom: 160,
     },
     turntableImg: {
       width: 200,
       height: 200,
       position: 'absolute',
-      bottom: 170,
-      marginBottom: 100, //looks weird on desktop
+      alignSelf: 'center',
+      top: 100,
+      padding: 20
+    },
+    header: {
+      position: 'absolute',
+      top: 250,
+      padding: 20,
+      color: '#fff',
       alignSelf: 'center',
     },
-    bodyText: {
-      color: 'white',
-      textAlign: 'center'
+    subtitle:{
+      color: '#fff',
+      alignSelf: 'center',
+      fontSize: 40,
+
+    },
+    buttonContainer: {
+      top: 140,
+      backgroundColor: 'white',
+      borderColor: '#c8acd6',
+      padding: 15,
+      marginHorizontal: 20,
+      marginVertical: 20,
+      alignItems: 'center',
+      borderRadius: 20,
+      borderWidth: 10,
     },
     buttons: {
-      marginTop: 30,
-      backgroundColor: '#FFF',
-      padding: 10,
-      alignItems: 'center',
-      borderRadius: 5,
-      color: 'black'
+      color: 'black',
+      fontSize: 18,
     }
   });
 
