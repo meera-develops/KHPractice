@@ -1,5 +1,7 @@
 import * as React from 'react';
-import { ImageBackground, Image, Button, StyleSheet, Text, View } from 'react-native';
+import { ImageBackground, Image, StyleSheet, Text, View } from 'react-native';
+import { Button, ButtonText } from '@/components/ui/button';
+
 
 import heroScreenImg from '../assets/echo-img/home-screen.jpg';
 import turntable from '../assets/echo-img/turntable-light.png';
@@ -18,8 +20,12 @@ const HomeScreen = ({ navigation }) => {
               style={styles.turntableImg}
             ></Image>
 
+            <Button size="lg" variant="solid" action="negative">
+              <ButtonText>Sign up</ButtonText>
+            </Button>
+
             {/* convert to TouchableOpacity */}
-            <Button
+            {/* <Button
               style={styles.buttons}
               title="Go to Signup Screen"
               onPress={() => navigation.navigate('Signup')}
@@ -29,7 +35,7 @@ const HomeScreen = ({ navigation }) => {
               style={styles.buttons}
               title="LOGIN"
               onPress={() => navigation.navigate('Login')}
-            />
+            /> */}
             {/* convert to TouchableOpacity */}
 
           </ImageBackground>
@@ -61,7 +67,7 @@ const HomeScreen = ({ navigation }) => {
       height: 200,
       position: 'absolute',
       bottom: 170,
-      marginBottom: 100,//looks weird on desktop
+      marginBottom: 100, //looks weird on desktop
       alignSelf: 'center',
     },
     bodyText: {
