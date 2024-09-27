@@ -58,7 +58,7 @@ const HomeScreen = ({ navigation }) => {
       lineHeight: 84,
       textAlign: 'center',
       alignSelf: 'center',
-      letterSpacing: '15',
+      letterSpacing: 20,
     },
     turntableImg: {
       width: 100,
@@ -81,9 +81,10 @@ const HomeScreen = ({ navigation }) => {
       color: '#978D9C',
       alignSelf: 'center',
       fontSize: 30,
+      letterSpacing: 2
     },
     buttonContainer: {
-      top: 140,
+      top: 160,
       backgroundColor: 'white',
       borderColor: '#c8acd6',
       padding: 15,
