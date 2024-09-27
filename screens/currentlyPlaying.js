@@ -5,8 +5,8 @@ import { StyleSheet, Text, View } from 'react-native';
 const SignupScreen = ({ navigation }) => {
     return (
       <View style={styles.container}>
-        <Text>Intro signup Screen</Text>
-        <Text>Demo Text</Text>
+        <Text style={styles.text}>See you favorite hits here</Text>
+        <Text style={styles.text}>Listen to what your friends are listening to</Text>
       </View>
     );
   };
@@ -15,10 +15,13 @@ const SignupScreen = ({ navigation }) => {
   const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#fff',
+      backgroundColor: '#a6c5d6',
       alignItems: 'center',
       justifyContent: 'center',
     },
+    text: {
+      color: 'green'
+    }
   });
 
   export default SignupScreen;

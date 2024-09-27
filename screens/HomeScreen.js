@@ -20,12 +20,6 @@ const HomeScreen = ({ navigation }) => {
 
             <Text style={styles.header}>Find your <Text style={styles.subtitle}> E c h o</Text></Text>
 
-            <TouchableOpacity onPress={() => navigation.navigate('Signup')} style={styles.buttonContainer}>
-              <Text style={styles.buttons}>
-                Sign up
-              </Text>
-            </TouchableOpacity>
-
             <TouchableOpacity onPress={() => navigation.navigate('Login')} style={styles.buttonContainer}>
               <Text style={styles.buttons}>
                 Log in
@@ -40,7 +34,7 @@ const HomeScreen = ({ navigation }) => {
   const styles = StyleSheet.create({
     container: {
       flex: 1,
-      position: 'relative'
+      position: 'relative',
     },
     heroImg: {
       flex: 1,
@@ -51,6 +45,7 @@ const HomeScreen = ({ navigation }) => {
     },
     heroText: {
       position: 'absolute',
+      marginTop: 140,
       top: 5,
       padding: 20,
       color: '#C8ACD6',
@@ -65,13 +60,13 @@ const HomeScreen = ({ navigation }) => {
       height: 135,
       position: 'absolute',
       alignSelf: 'center',
-      top: 140,
+      top: 270,
       zIndex: 1,
       //padding: 20
     },
     header: {
       position: 'absolute',
-      top: 290,
+      top: 420,
       padding: 20,
       color: '#fff',
       fontSize: 28,
@@ -84,7 +79,7 @@ const HomeScreen = ({ navigation }) => {
       letterSpacing: 2
     },
     buttonContainer: {
-      top: 160,
+      top: 140,
       backgroundColor: 'white',
       borderColor: '#c8acd6',
       padding: 15,
@@ -95,8 +90,9 @@ const HomeScreen = ({ navigation }) => {
       borderWidth: 10,
     },
     buttons: {
-      color: 'black',
+      color: '#433D8B',
       fontSize: 18,
+      fontWeight: 'bold'
     }
   });
 

@@ -27,11 +27,6 @@ const LoginScreen = ({ navigation }) => {
               <TextInput style={styles.input} placeholder="Enter Username" />
             </View>
 
-            {/* make this text blue
-            change submit button
-            confirm mobile looks good 
-            add box -- finish page, start on navbar component and then home screen possibly  */}
-
             <View style={styles.inputContainer}>
               <Text style={styles.text}>Password</Text>
               <TextInput
@@ -43,11 +38,11 @@ const LoginScreen = ({ navigation }) => {
 
             <TouchableOpacity onPress={() => navigation.navigate('ForgotPW')}>
               <Text style={styles.forgotPassword}>
-                Forgot Password? <Text style={styles.clickable}>Click here!</Text>
+                Forgot Password?
               </Text>
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.submitContainer}>
+            <TouchableOpacity onPress={() => navigation.navigate('currentlyPlaying')} style={styles.submitContainer}>
               <Text style={styles.submit}>Sign Up</Text>
             </TouchableOpacity>
           </View>
@@ -59,6 +54,7 @@ const LoginScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    marginTop: -30
   },
   heroImg: {
       flex: 1,
@@ -68,7 +64,7 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
     },
   heroIext: {
-    top: 40,
+    top: 10,
     letterSpacing: 22,
     color: 'white',
     fontSize: 65,
@@ -77,15 +73,16 @@ const styles = StyleSheet.create({
     textAlign: 'center'
   },
   header: {
-    marginBottom: 40,
+    marginBottom: 30,
   },
   text: {
     fontSize: 24,
     fontWeight: 'bold',
     color: 'white',
-    padding: 20
+    padding: 15
   },
   subtitle: {
+    marginTop: 10,
     fontSize: 16,
     fontWeight: 'bold',
     color: 'white',
@@ -93,17 +90,18 @@ const styles = StyleSheet.create({
   },
   echo: {
     letterSpacing: 10,
-    fontSize: 30,
-    color: 'white',
+    fontSize: 28,
+    color: '#433d8b',
+    fontStyle: 'italic'
   },
   logo: {
     resizeMode: 'contain',
-    width: 100,
-    height: 100,
+    width: 80,
+    height: 80,
     alignSelf: 'center'
   },
   inputs: {
-    marginTop: 20,
+    marginTop: 10,
     color: 'blue'
   },
   inputContainer: {
@@ -112,16 +110,15 @@ const styles = StyleSheet.create({
   input: {
     height: 40,
     borderColor: 'white',
-    borderWidth: 5,
+    borderWidth: 2,
     borderRadius: 15,
     padding: 20,
     marginHorizontal: 20,
-    marginTop: 5,
+    //marginTop: 5,
   },
   forgotPassword: {
-    color: 'blue',
+    color: 'white',
     textDecorationLine: 'underline',
-    marginTop: 15,
     marginHorizontal: 25,
   },
   clickable: {
@@ -129,10 +126,12 @@ const styles = StyleSheet.create({
   },
   submitContainer: {
     marginTop: 30,
-    backgroundColor: 'blue',
-    padding: 10,
+    backgroundColor:'#C8ACD6',
+    padding: 15,
     alignItems: 'center',
-    borderRadius: 5,
+    borderRadius: 15,
+    borderColor: 'white',
+    borderWidth: 3,
     marginHorizontal: 25
   },
   submit: {
