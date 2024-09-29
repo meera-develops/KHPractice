@@ -8,6 +8,8 @@ import turntable from '../assets/echo-img/music_note.png';
 const HomeScreen = ({ navigation }) => {
     return (
         <View style={styles.container}>
+
+          
           <ImageBackground
             source={heroScreenImg}
             style={styles.heroImg}>
