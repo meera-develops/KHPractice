@@ -2,7 +2,7 @@ import * as React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 
-const SignupScreen = ({ navigation }) => {
+const currentlyPlaying = ({ navigation }) => {
     return (
       <View style={styles.container}>
         <Text style={styles.text}>See you favorite hits here</Text>
@@ -24,4 +24,4 @@ const SignupScreen = ({ navigation }) => {
     }
   });
 
-  export default SignupScreen;
+  export default currentlyPlaying;
