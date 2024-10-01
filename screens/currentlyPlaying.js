@@ -5,7 +5,7 @@ import { StyleSheet, Text, View } from 'react-native';
 const SignupScreen = ({ navigation }) => {
     return (
       <View style={styles.container}>
-        <Text style={styles.text}>See you favorite hits here</Text>
+        <Text style={styles.text}>See your favorite hits here</Text>
         <Text style={styles.text}>Listen to what your friends are listening to</Text>
       </View>
     );
