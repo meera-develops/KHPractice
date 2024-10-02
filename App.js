@@ -14,12 +14,27 @@ import ForgotPW from './screens/ForgotPw';
 
 const Stack = createNativeStackNavigator();
 
+const linking = {
+  prefixes: ['https://myapp.com', 'myapp://'],
+  config: {
+    screens: {
+      Home: 'home',
+      Signup: 'signup',
+      Login: 'login',
+      ForgotPW: 'forgot-password',
+      currentlyPlaying: 'currently-playing',
+    },
+  },
+};
+
+
 export default function App() {
   return (
     <>
       {/* <StatusBar style="light" backgroundColor='transparent' translucent={true} /> */}
-      <NavigationContainer>
-        <Stack.Navigator>
+      
+      <NavigationContainer linking = {linking}>
+        <Stack.Navigator initialRouteName="Home">
           <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
           <Stack.Screen name="currentlyPlaying" component={currentlyPlaying} options = {{ headerShown: false }} />
           <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false }} />
