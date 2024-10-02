@@ -3,53 +3,37 @@ import { StyleSheet, Text, Image, View, TextInput, TouchableOpacity, ImageBackgr
 
 import heroScreenImg from '../assets/echo-img/home-screen.jpg';
 import spotify from '../assets/echo-img/spotify-logo.png';
+import { Button } from '@/components/ui/button';
+import { userLogin } from '../spotify/auth/auth.js';
+
 
 const LoginScreen = ({ navigation }) => {
   return (
-      <View style={styles.container}>
-        <ImageBackground
-          source={heroScreenImg}
-          style={styles.heroImg}>
+    <View style={styles.container}>
+      <ImageBackground
+        source={heroScreenImg}
+        style={styles.heroImg}
+      >
+        <View style={styles.header}>
+          <Text style={styles.heroText}>ECHO</Text>
+        </View>
 
-          <View style={styles.header}>
-            <Text style={styles.heroIext}>ECHO</Text>
-          </View>
+        <Image source={spotify} style={styles.logo} />
 
-          <Image
-            source={spotify}
-            style={styles.logo}>
-            </Image>
+        <View style={styles.inputs}>
+          <Text style={styles.subtitle}>
+            Log in with your Spotify Account and <Text style={styles.echo}>ECHO</Text> will authenticate
+          </Text>
 
-          <View style={styles.inputs}>
-            <View style={styles.inputContainer}>
-              <Text style={styles.subtitle}>Log in with your Spotify Account and <Text style={styles.echo}>ECHO</Text> will authenticate</Text>
-              <Text style={styles.text}>Username</Text>
-              <TextInput style={styles.input} placeholder="Enter Username" />
-            </View>
-
-            <View style={styles.inputContainer}>
-              <Text style={styles.text}>Password</Text>
-              <TextInput
-                style={styles.input}
-                placeholder="Enter Password"
-                secureTextEntry
-              />
-            </View>
-
-            <TouchableOpacity onPress={() => navigation.navigate('ForgotPW')}>
-              <Text style={styles.forgotPassword}>
-                Forgot Password?
-              </Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity onPress={() => navigation.navigate('currentlyPlaying')} style={styles.submitContainer}>
-              <Text style={styles.submit}>Sign Up</Text>
-            </TouchableOpacity>
-          </View>
-        </ImageBackground>
-      </View>
+          <TouchableOpacity onPress={() => userLogin()} style={styles.submitContainer}>
+            <Text style={styles.submit}>Log in with Spotify</Text>
+          </TouchableOpacity>
+        </View>
+      </ImageBackground>
+    </View>
   );
 };
+
 
 const styles = StyleSheet.create({
   container: {
