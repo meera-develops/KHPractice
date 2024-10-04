@@ -35,7 +35,7 @@ const HomeScreen = ({ navigation }) => {
 
         <TouchableOpacity onPress={handleSpotifyLogin} style={styles.buttonContainer}>
           <Text style={styles.buttons}>
-            Log into Spotify
+            Login with Spotify
           </Text>
         </TouchableOpacity>
       </ImageBackground>

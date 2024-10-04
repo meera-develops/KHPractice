@@ -16,7 +16,7 @@ request.post(authOptions, function(error, response, body) {
   if (!error && response.statusCode === 200) {
     var token = body.access_token;
   }
-});
+})();
 
 /*async function getProfile(accessToken) {
     let accessToken = localStorage.getItem('access_token');
